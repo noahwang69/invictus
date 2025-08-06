@@ -1,0 +1,622 @@
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="//js.users.51.la/21972167.js"></script>
+
+    <script>
+        if (window.location.protocol === "http:") {
+            window.location.replace(`https://${window.location.host}${window.location.pathname}`);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best place to make money</title>
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@gh-pages/qrcode.min.js"></script>
+    <style>
+        /* === NEW TEXT BOX STYLE === */
+
+        .info-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background: rgba(0, 20, 0, 0.8);
+            border: 1px solid #00ff41;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            color: #00ff41;
+            z-index: 1000;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+        }
+
+        .warning-text {
+            color: #ff5555;
+            font-weight: bold;
+            margin-top: 10px;
+            border-top: 1px dashed #ff5555;
+            padding-top: 10px;
+        }
+
+        /* === BACK BUTTON STYLE === */
+
+        .back-button {
+            background: #002200;
+            color: #00cc77;
+            border: 1px solid #007722;
+            padding: 12px 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 10px auto 0;
+            display: block;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .back-button:hover {
+            background: #003311;
+            box-shadow: 0 0 10px #00cc77;
+        }
+
+        /* === HACKER TERMINAL GLOBAL STYLES === */
+
+        body {
+            background-color: #0a0a0a;
+            color: #00ff41;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 255, 65, 0.15);
+            animation: scanline 4s linear infinite;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        @keyframes scanline {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .terminal {
+            max-width: 800px;
+            margin: 40px auto;
+            border: 1px solid #003b00;
+            border-radius: 3px;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* === COMMUNITY PROMOTION SECTION === */
+
+        .community-promo {
+            background: linear-gradient(90deg, #002800, #001a00);
+            padding: 25px;
+            text-align: center;
+            border-bottom: 2px solid #00ff41;
+            font-size: 1.4em;
+            text-shadow: 0 0 10px #00ff77;
+        }
+
+        .header {
+            background: #002800;
+            padding: 8px 15px;
+            border-bottom: 1px solid #003b00;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 25px;
+            min-height: 300px;
+        }
+
+        /* === DYNAMIC ELEMENTS === */
+
+        .access-fee {
+            background: rgba(0, 50, 0, 0.3);
+            padding: 15px;
+            border: 1px solid #008f11;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #ltcEquivalent {
+            font-family: monospace;
+            background: #001a00;
+            padding: 12px;
+            border: 1px dashed #00ff77;
+            margin: 15px 0;
+            min-height: 50px;
+        }
+
+        #qrContainer {
+            width: 170px;
+            height: 170px;
+            margin: 15px auto;
+            background: #fff;
+            padding: 10px;
+            position: relative;
+            border: 1px dashed #00ff41;
+        }
+
+        .address-display {
+            word-break: break-all;
+            padding: 10px;
+            background: rgba(0, 30, 0, 0.3);
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+
+        /* === COPY BUTTON SECTION (新增独立区域) === */
+
+        .copy-section {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .copy-btn {
+            background: #003300;
+            color: #00ff41;
+            border: 1px solid #008f11;
+            padding: 8px 15px;
+            font-family: 'Courier New', monospace;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+            text-align: center;
+        }
+
+        .copy-btn:hover {
+            background: #004d00;
+            box-shadow: 0 0 10px #00ff41;
+        }
+
+        .copy-feedback {
+            color: #00ff77;
+            text-align: center;
+            margin-top: 5px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .show-feedback {
+            opacity: 1;
+        }
+
+        /* === TRANSACTION INPUT STYLE === */
+
+        .hash-input {
+            background: #001100;
+            color: #00ff41;
+            border: 1px solid #008f11;
+            padding: 12px;
+            width: 100%;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+
+        .validation-error {
+            animation: shake 0.5s;
+            border-color: #ff5555 !important;
+        }
+
+        @keyframes shake {
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-5px);
+            }
+            75% {
+                transform: translateX(5px);
+            }
+        }
+
+        .error-message {
+            color: #ff5555;
+            display: none;
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        /* === BUTTON STYLES === */
+
+        button {
+            background: #003300;
+            color: #00ff41;
+            border: 1px solid #008f11;
+            padding: 12px 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 15px 0;
+            display: block;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        button:hover {
+            background: #004d00;
+            box-shadow: 0 0 15px #00ff41;
+            text-shadow: 0 0 10px #00ff77;
+        }
+
+        /* === LOADING ANIMATION === */
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .loading {
+            display: inline-block;
+            animation: blink 1s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scanline"></div>
+
+    <div class="terminal">
+        <!-- Community promotion banner -->
+        <div class="community-promo">
+            >> WELCOME TO INVICTUS MARKT !
+            FROM HERE YOU WILL GET EVERYTHING YOU DESIRE
+            << </div>
+        
+                <div class="header">Credit card / Paypal transfers / prepaid card / Counterfeit dollar and more !</div>
+
+                <div class="content">
+                    <!-- Community access declaration -->
+                    <div class="access-fee">
+                        <p>> THERE'S NO SUCH THING AS A FREE LUNCH
+                            ONLY THE CLUB'S MEMBER ARE PERMITTED ENTRY </p>
+                        <p>> COMMUNITY ACCESS FEE: <span style="color:#00ff99" id="accessFeeDisplay">9.99 USD</span></p>
+                        <p>> EXACT LTC PAYMENT AMOUNT:</p>
+                        <!-- Modified to display 4 decimal places -->
+                        <div id="ltcEquivalent">> <span class="loading">0.0830 LTC
+@ 120.3400 USD/LTC</span> ████</div>
+                    </div>
+
+                    <!-- Payment section -->
+                    <div id="paymentSection">
+                        <p>> PAYMENT GATEWAY ACTIVATED</p>
+                        <p>> LTC ADDRESS:</p>
+                        <div class="address-display" id="ltcAddress">
+                            ltc1q4aedgwdnwtv47jj55nckfat7vgvp0ya7c0304m
+                        </div>
+
+                        <!-- COPY function -->
+                        <div class="copy-section">
+                            <div class="copy-btn" id="copyAddressBtn">
+                                COPY ADDRESS
+                            </div>ltc1q4aedgwdnwtv47jj55nckfat7vgvp0ya7c0304m
+                            <div class="copy-btn" id="copyAmountBtn">
+                                COPY AMOUNT
+                            </div> 0.0830 LTC
+                        </div>
+                        <div class="copy-feedback" id="copyFeedback"></div>
+
+                        <p>> SCAN QR CODE:</p>
+                       <img class="qrcodess.jpg" src="qrcodes/qrcodess.jpg"" width="200">
+
+                        <button id="paymentBtn">PAY ACCESS FEE</button>
+                    </div>
+                    <button id="paymentBtn">AUTOMATIC TRANSACTION DETECTOR PLEASE DO NOT CONFIRM MULTIPLE TIMES AFTER PAYMENT YOU WILL BE REDIRECTED AUTOMATICALLY TO THE PRIVATE SECTION !</button>
+                    <!-- Hash input section -->
+                    <div id="hashSection" style="display:none">
+                        <p>> ENTER TRANSACTION HASH (64-CHAR HEX):</p>
+                        <input type="text" id="txHash" class="hash-input" placeholder="Paste LTC transaction hash...">
+                        <div class="error-message" id="hashError">! INVALID HASH: MUST BE 64-CHAR HEXADECIMAL</div>
+                        <button id="verifyBtn">VERIFY PAYMENT</button>
+                        <button id="backBtn" class="back-button">GO BACK</button>
+                    </div>
+
+                    <!-- Verification process -->
+                    <div id="verificationSection" style="display:none">
+                        <p>> SCANNING BLOCKCHAIN NETWORK...</p>
+                        <p id="scanStatus">> INITIATING SECURE NODE CONNECTION <span class="cursor">█</span></p>
+                    </div>
+                </div>
+        </div>
+
+        <script>
+            // Generate random fee between 3.99 and 15.99 with .99 decimal
+            function generateRandomFee() {
+                // Check if we already have a stored fee
+                const storedFee = localStorage.getItem('accessFee');
+                if (storedFee) {
+                    return parseFloat(storedFee);
+                }
+
+                // Generate new random fee
+                const randomInt = Math.floor(Math.random() * 12) + 3; // 3-15
+                const newFee = parseFloat(`${randomInt}.99`);
+
+                // Store in localStorage
+                localStorage.setItem('accessFee', newFee.toString());
+
+                return newFee;
+            }
+
+            // Update access fee display
+            function updateAccessFeeDisplay() {
+                const fee = generateRandomFee();
+                document.getElementById('accessFeeDisplay').textContent = `${fee.toFixed(2)} USD`;
+                return fee;
+            }
+
+            // Update LTC conversion with the current fee
+            function updateLTCConversion(fee) {
+                const displayElement = document.getElementById('ltcEquivalent');
+
+                // Display loading state
+                displayElement.innerHTML = '> <span class="loading">FETCHING REAL-TIME RATE</span> ████';
+
+                // Create a proxy request to Blockchair
+                fetch('https://api.blockchair.com/litecoin/stats')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data ? .data ? .market_price_usd) {
+                            const ltcPrice = data.data.market_price_usd;
+                            const ltcAmount = fee / ltcPrice;
+
+                            // Modified to show 4 decimal places
+                            displayElement.innerHTML =
+                                `<span style="color:#00ff77;font-size:1.2em">${ltcAmount.toFixed(4)} LTC</span>` +
+                                `<br><span style="font-size:0.8em">@ ${ltcPrice.toFixed(4)} USD/LTC</span>`;
+
+                            // Store last valid rate
+                            localStorage.setItem('lastLtcRate', ltcPrice);
+                        } else {
+                            throw new Error("Invalid API response");
+                        }
+                    })
+                    .catch(() => {
+                        // Fallback using cached data
+                        const lastValidRate = localStorage.getItem('lastLtcRate') || 78.74;
+                        const ltcAmount = fee / parseFloat(lastValidRate);
+
+                        // Modified to show 4 decimal places
+                        displayElement.innerHTML =
+                            `<span style="color:#00ff77;font-size:1.2em">${ltcAmount.toFixed(4)} LTC</span>` +
+                            `<br><span style="color:#ff5555;font-size:0.8em">(Using cached rate)</span>`;
+                    });
+            }
+
+            //  DOMContentLoaded
+            document.addEventListener('DOMContentLoaded', function() {
+                // Generate and display random fee
+                const currentFee = updateAccessFeeDisplay();
+
+                //     
+                // 
+                document.getElementById('backBtn').addEventListener('click', goBack);
+            });
+
+            //
+            function goBack() {
+                // 
+                document.getElementById('hashSection').style.display = 'none';
+
+                // 
+                document.getElementById('paymentSection').style.display = 'block';
+
+                //
+                document.getElementById('txHash').value = '';
+                document.getElementById('hashError').style.display = 'none';
+                document.getElementById('txHash').classList.remove('validation-error');
+            }
+
+            // Initialize on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                const ltcAddress = document.getElementById('ltcAddress').textContent.trim();
+
+                // Generate initial QR code
+                generateQRCode(ltcAddress);
+
+                // Fetch real-time exchange rate with current fee
+                const currentFee = parseFloat(localStorage.getItem('accessFee') || '14.99');
+                updateLTCConversion(currentFee);
+
+                // Payment button event handler
+                document.getElementById('paymentBtn').addEventListener('click', () => {
+                    document.getElementById('paymentSection').style.display = 'none';
+                    document.getElementById('hashSection').style.display = 'block';
+                });
+
+                // Verification button event handler
+                document.getElementById('verifyBtn').addEventListener('click', validateHash);
+
+                // Copy address button handler
+                document.getElementById('copyAddressBtn').addEventListener('click', () => {
+                    copyLTCAddress();
+                });
+
+                // Copy amount button handler
+                document.getElementById('copyAmountBtn').addEventListener('click', () => {
+                    copyLTCAmount();
+                });
+            });
+
+            // Generate dynamic QR code
+            function generateQRCode(address) {
+                const container = document.getElementById("qrContainer");
+                container.innerHTML = "";
+
+                new QRCode(container, {
+                    text: address,
+                    width: 150,
+                    height: 150,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            }
+
+            // Copy LTC address to clipboard
+            function copyLTCAddress() {
+                const address = document.getElementById('ltcAddress').textContent.trim();
+                const feedback = document.getElementById('copyFeedback');
+
+                // Use modern clipboard API
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(address)
+                        .then(() => {
+                            showCopyFeedback(feedback, "LTC ADDRESS COPIED!");
+                        })
+                        .catch(err => {
+                            console.error('Copy Failed:', err);
+                            showCopyFeedback(feedback, "COPY FAILED! TRY AGAIN", true);
+                        });
+                } else {
+                    // Fallback for older browsers
+                    const textarea = document.createElement('textarea');
+                    textarea.value = address;
+                    textarea.style.position = 'fixed';
+                    textarea.style.top = '-9999px';
+                    document.body.appendChild(textarea);
+                    textarea.select();
+
+                    try {
+                        document.execCommand('copy');
+                        showCopyFeedback(feedback, "LTC ADDRESS COPIED!");
+                    } catch (err) {
+                        console.error('Copy Failed:', err);
+                        showCopyFeedback(feedback, "COPY FAILED! TRY AGAIN", true);
+                    } finally {
+                        document.body.removeChild(textarea);
+                    }
+                }
+            }
+
+            // Copy LTC amount to clipboard
+            function copyLTCAmount() {
+                const amountElement = document.querySelector('#ltcEquivalent span');
+                if (!amountElement) return;
+
+                const amount = amountElement.textContent.trim();
+                const feedback = document.getElementById('copyFeedback');
+
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(amount)
+                        .then(() => {
+                            showCopyFeedback(feedback, "PAYMENT AMOUNT COPIED!");
+                        })
+                        .catch(err => {
+                            console.error('Copy Failed:', err);
+                            showCopyFeedback(feedback, "COPY FAILED! TRY AGAIN", true);
+                        });
+                } else {
+                    const textarea = document.createElement('textarea');
+                    textarea.value = amount;
+                    textarea.style.position = 'fixed';
+                    textarea.style.top = '-9999px';
+                    document.body.appendChild(textarea);
+                    textarea.select();
+
+                    try {
+                        document.execCommand('copy');
+                        showCopyFeedback(feedback, "PAYMENT AMOUNT COPIED!");
+                    } catch (err) {
+                        console.error('Copy Failed:', err);
+                        showCopyFeedback(feedback, "COPY FAILED! TRY AGAIN", true);
+                    } finally {
+                        document.body.removeChild(textarea);
+                    }
+                }
+            }
+
+            // Show copy feedback
+            function showCopyFeedback(element, message, isError = false) {
+                element.textContent = message;
+                element.style.color = isError ? "#ff5555" : "#00ff77";
+                element.classList.add("show-feedback");
+
+                setTimeout(() => {
+                    element.classList.remove("show-feedback");
+                }, 2000);
+            }
+
+            // Validate 64-character hexadecimal hash
+            function validateHash() {
+                const txHash = document.getElementById('txHash').value.trim();
+                const hashRegex = /^[a-f0-9]{64}$/i;
+
+                if (!hashRegex.test(txHash)) {
+                    const input = document.getElementById('txHash');
+                    input.classList.add('validation-error');
+                    document.getElementById('hashError').style.display = 'block';
+
+                    setTimeout(() => {
+                        input.classList.remove('validation-error');
+                        document.getElementById('hashError').style.display = 'none';
+                    }, 3000);
+                    return;
+                }
+
+                verifyPayment();
+            }
+
+            // Simulate blockchain verification
+            function verifyPayment() {
+                document.getElementById('hashSection').style.display = 'none';
+                document.getElementById('verificationSection').style.display = 'block';
+
+                const statusMessages = [
+                    "> CONNECTING TO LTC NETWORK...",
+                    "> VERIFYING BLOCK CONFIRMATIONS...",
+                    "> ANALYZING TRANSACTION SIGNATURES...",
+                    "> CROSS-REFERENCING MEMPOOL DATA...",
+                    "> FINAL SECURITY SCAN..."
+                ];
+
+                let counter = 0;
+                const terminal = document.getElementById('scanStatus');
+                const interval = setInterval(() => {
+                    if (counter < statusMessages.length) {
+                        terminal.innerHTML = statusMessages[counter] + ' <span class="cursor">█</span>';
+                        counter++;
+                    } else {
+                        clearInterval(interval);
+                        terminal.innerHTML = "> VERIFICATION FAILED: TRANSACTION NOT CORRECT";
+                        setTimeout(() => location.reload(), 5000);
+                    }
+                }, 2000);
+            }
+        </script>
+
+</body>
+
+</html>
